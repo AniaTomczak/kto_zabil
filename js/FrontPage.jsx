@@ -6,14 +6,26 @@ class FrontPage extends React.Component{
         super(props);
 
         this.state = {
-            text: "Czy na pewno chcesz wiedzieć...."
+            text: "Czy na pewno chcesz wiedzieć....",
+            style: {
+                color: "white",
+                textAlign: "center",
+                fontSize: "5em",
+                fontFamily: "'Josefin Sans', sans-serif"
+            }
         }
     }
 
     componentDidMount() {
         this.id = setTimeout(() => {
             this.setState({
-                text: 'Kto zabił?'
+                text: 'Kto zabił?',
+                style: {
+                    color: "white",
+                    textAlign: "center",
+                    fontSize: "10em",
+                    fontFamily: "'Josefin Sans', sans-serif"
+                }
             })
         }, 5000);
     }
@@ -27,7 +39,7 @@ class FrontPage extends React.Component{
             <section className="front_page">
                 <div className="title">
                     <div className="images">
-                        <p>{ this.state.text }</p>
+                        <p style={this.state.style}>{ this.state.text }</p>
                     </div>
                 </div>
             </section>
