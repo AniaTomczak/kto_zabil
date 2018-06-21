@@ -6,7 +6,7 @@ class Header extends React.Component{
             <header>
                 <div></div>
                 <div className="container">
-                    <button type="button" className="btn">Zaloguj</button>
+                    <button onClick={this.props.login} type="button" className="btn">Zaloguj</button>
                 </div>
             </header>
         )

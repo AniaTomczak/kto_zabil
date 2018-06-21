@@ -8,6 +8,7 @@ class Books extends React.Component{
     }
     render(){
         const listItems = this.props.books.map((d) => <Book onClick={this.props.onClick} url={d.url} killer={d.killer} />);
+        console.log("test");
         return(
             <div className="books">
                 {listItems}

@@ -10,3 +10,9 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById('app')
     );
 });
+
+
+
+
+// java -jar ~/Downloads/backend.jar
+

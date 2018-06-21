@@ -12,7 +12,7 @@ class SearchBook extends React.Component{
     }
 
     onKeyPressed = event => {
-        if (event.target.value.length < 3) {
+        if (event.target.value.length < 1) {
             this.setState({
                 books: []
             });
@@ -40,7 +40,7 @@ class SearchBook extends React.Component{
         return(
             <section>
                 <div className="search_book">
-                    <input onFocus={ this.onFocus }  onChange={this.onKeyPressed} type="text" placeholder="Podaj tytuł książki"/>
+                    <input onFocus={ this.onFocus }  onChange={this.onKeyPressed} type="text" placeholder="Podaj tytuł książki lub autora"/>
                     <Books onClick={this.props.onClick} books={this.state.books}/>
                     <div ref={el => { this.el = el; }} className="search_book_el">
                 </div>
