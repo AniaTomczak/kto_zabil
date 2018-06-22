@@ -28,6 +28,12 @@ header{
         border: #CBD5E0 2px solid;
         color: #5E7A92;
       }
+    .btn:focus{
+      outline: none;
+    }
+    .btn:hover{
+      background-color: #E5E7EE;
+    }
   }
 }
 
@@ -56,11 +62,15 @@ header{
     font-size: 1em;
     color: #5E7A92;
     text-align: center;
-    border: 2px solid #5E7A92;
+    border: 2px solid #A1B3C4;
     border-radius: 5px;
   }
   input:focus{
     outline: none;
+    border: 2px solid #5E7A92;
+  }
+  input:hover{
+    border: 2px solid #5E7A92;
   }
   .books{
     display: flex;
@@ -81,7 +91,25 @@ header{
 footer{
   background-color: #5E7A92;
   width: 100%;
-  height: 50px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container_footer{
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+
+    a{
+      img{
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 .opacity{
@@ -150,8 +178,72 @@ footer{
     justify-content: center;
     align-items: center;
     p{
-      font-size: 6em;
+      font-size: 5em;
+      text-align: center;
       color: #2A4054;
+    }
+  }
+}
+
+.login{
+  width: 330px;
+  height: 200px;
+  background-color: rgba(245, 244, 244, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  .login_in{
+    width: 310px;
+    height: 170px;
+    background-color: white;
+    border: 4px #5E7A92 dotted;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .login_input{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 10px 0 5px 0;
+      .input_login{
+        width: 10em;
+        height: 2em;
+        font-size: 1em;
+        color: #5E7A92;
+        text-align: center;
+        border: 2px solid #5E7A92;
+        border-radius: 5px;
+        margin: 5px 0 5px 0;
+      }
+      .input_login:focus{
+        outline: none;
+      }
+    }
+    .login_button{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 0 10px 0;
+      .button_login{
+        width: 100px;
+        height: 30px;
+        margin: 10px;
+        background-color: #5E7A92;
+        color: white;
+        border-radius: 5px;
+      }
+      .button_login:focus{
+        outline: none;
+      }
+      .button_login:hover{
+        background-color: #2A4054;
+      }
     }
   }
 }

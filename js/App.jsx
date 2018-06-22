@@ -26,9 +26,14 @@ class App extends React.Component{
     };
 
     login = () => {
-        console.log("jestem");
         this.setState({
             showLogin: true
+        });
+    };
+
+    closeLogin = () => {
+        this.setState({
+            showLogin: false
         });
     };
 
@@ -45,7 +50,7 @@ class App extends React.Component{
         return (
             <div>
                 {this.state.showCover? <Opacity hideComponent={this.hideComponent} url={this.state.url} killer={this.state.killer}/>: null}
-                {this.state.showLogin? <Login />: null}
+                {this.state.showLogin? <Login close={this.closeLogin} />: null}
                 <Header login={this.login}/>
                 <FrontPage/>
                 <SearchBook onClick={this.onClick}/>

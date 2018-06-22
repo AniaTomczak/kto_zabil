@@ -12,7 +12,7 @@ class SearchBook extends React.Component{
     }
 
     onKeyPressed = event => {
-        if (event.target.value.length < 1) {
+        if (event.target.value.length < 3) {
             this.setState({
                 books: []
             });
